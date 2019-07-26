@@ -113,8 +113,8 @@ $(function(){
 
 	var audio_chime1,audio_chime2,audio_chime3;
 	audio_chime1 = new Audio("./wav/chime1.wav");
-	audio_chime2 = new Audio("./wav/jihou1.ogg");
-	audio_chime3 = new Audio("./wav/jihou2.ogg");
+	audio_chime2 = new Audio("./wav/jihou1.wav");
+	audio_chime3 = new Audio("./wav/jihou2.wav");
 
 	function changeStateClass(s) {
 		$('body').removeClass(function(index, className) {
