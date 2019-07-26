@@ -24,12 +24,12 @@ THE SOFTWARE.
 
 $(function(){
 	var loadedcss = '';
-	$('#time1').val('25:00');
-	$('#time2').val('26:00');
-	$('#time3').val('27:00');
-	$('#time4').val('28:00');
-	$('#time5').val('29:00');
-	$('#time6').val('30:00');
+	$('#time1').val('00:25');
+	$('#time2').val('00:26');
+	$('#time3').val('00:27');
+	$('#time4').val('00:28');
+	$('#time5').val('00:29');
+	$('#time6').val('00:30');
 	$('#info').html("Click to edit this message.");
 	function getHashParams() {
     var hashParams = {};
