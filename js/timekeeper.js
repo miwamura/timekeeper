@@ -30,7 +30,8 @@ $(function(){
 	$('#time4').val('00:28');
 	$('#time5').val('00:29');
 	$('#time6').val('00:30');
-	$('#info').html("Click to edit this message.");
+	$('#info').html("MIRU2019 Spotlight Presentation");
+	// $('#info').html("Click to edit this message.");
 	function getHashParams() {
     var hashParams = {};
     var e,
