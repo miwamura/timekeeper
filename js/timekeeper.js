@@ -112,8 +112,8 @@ $(function(){
 
 	var audio_chime1,audio_chime2,audio_chime3;
 	audio_chime1 = new Audio("./wav/chime1.wav");
-	audio_chime2 = new Audio("./wav/chime2.wav");
-	audio_chime3 = new Audio("./wav/chime3.wav");
+	audio_chime2 = new Audio("./wav/jihou1.ogg");
+	audio_chime3 = new Audio("./wav/jihou2.ogg");
 
 	function changeStateClass(s) {
 		$('body').removeClass(function(index, className) {
@@ -222,43 +222,41 @@ $(function(){
 					var time2 = new Date(start_time.getTime()+((new Date('2011/1/1 00:'+$('#time2').val()))-(new Date('2011/1/1 00:00:00'))));
 					var time3 = new Date(start_time.getTime()+((new Date('2011/1/1 00:'+$('#time3').val()))-(new Date('2011/1/1 00:00:00'))));
 					var time4 = new Date(start_time.getTime()+((new Date('2011/1/1 00:'+$('#time4').val()))-(new Date('2011/1/1 00:00:00'))));
-
-					var time5 = new Date(start_time.getTime()+((new Date('2011/1/1 00:'+$('#time3').val()))-(new Date('2011/1/1 00:00:00'))));
-
-					var time6 = new Date(start_time.getTime()+((new Date('2011/1/1 00:'+$('#time3').val()))-(new Date('2011/1/1 00:00:00'))));
+					var time5 = new Date(start_time.getTime()+((new Date('2011/1/1 00:'+$('#time5').val()))-(new Date('2011/1/1 00:00:00'))));
+					var time6 = new Date(start_time.getTime()+((new Date('2011/1/1 00:'+$('#time6').val()))-(new Date('2011/1/1 00:00:00'))));
 				    
 					if((last_time < time1 && time1 <= cur_time) || (last_time==time1 && cur_time==time1)){
 						changePhaseClass('1');
-						audio_chime1.currentTime = 0;
-						audio_chime1.play();
+						audio_chime2.currentTime = 0;
+						audio_chime2.play();
 					}
 
 					if((last_time < time2 && time2 <= cur_time) || (last_time==time2 && cur_time==time2)){
 						changePhaseClass('2');
-						audio_chime1.currentTime = 0;
-						audio_chime1.play();
+						audio_chime2.currentTime = 0;
+						audio_chime2.play();
 					}
 
 					if((last_time < time3 && time3 <= cur_time) || (last_time==time3 && cur_time==time3)){
 						changePhaseClass('3');
-						audio_chime1.currentTime = 0;
-						audio_chime1.play();
+						audio_chime2.currentTime = 0;
+						audio_chime2.play();
 					}
 
 					if((last_time < time4 && time4 <= cur_time) || (last_time==time4 && cur_time==time4)){
 						changePhaseClass('4');
-						audio_chime1.currentTime = 0;
-						audio_chime1.play();
+						audio_chime2.currentTime = 0;
+						audio_chime2.play();
 					}
 
 					if((last_time < time5 && time5 <= cur_time) || (last_time==time5 && cur_time==time5)){
 						changePhaseClass('5');
-						audio_chime1.currentTime = 0;
-						audio_chime1.play();
+						audio_chime2.currentTime = 0;
+						audio_chime2.play();
 					}
 
 					if((last_time < time6 && time6 <= cur_time) || (last_time==time6 && cur_time==time6)){
-						changePhaseClass('6');
+						changePhaseClass('3');
 						audio_chime3.currentTime = 0;
 						audio_chime3.play();
 					}
