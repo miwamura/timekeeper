@@ -24,9 +24,12 @@ THE SOFTWARE.
 
 $(function(){
 	var loadedcss = '';
-	$('#time1').val('15:00');
-	$('#time2').val('20:00');
-	$('#time3').val('25:00');
+	$('#time1').val('25:00');
+	$('#time2').val('26:00');
+	$('#time3').val('27:00');
+	$('#time4').val('28:00');
+	$('#time5').val('29:00');
+	$('#time6').val('30:00');
 	$('#info').html("Click to edit this message.");
 	function getHashParams() {
     var hashParams = {};
@@ -45,9 +48,15 @@ $(function(){
 
   function parseHashParams(){
     params = getHashParams();
-    if(params.t1 !== undefined) $('#time1').val(params.t1);
+		if(params.t1 !== undefined) $('#time1').val(params.t1);
 		if(params.t2 !== undefined) $('#time2').val(params.t2);
 		if(params.t3 !== undefined) $('#time3').val(params.t3);
+		if(params.t4 !== undefined) $('#time4').val(params.t4);
+		if(params.t5 !== undefined) $('#time5').val(params.t5);
+		if(params.t6 !== undefined) $('#time6').val(params.t6);
+		// if(params.t7 !== undefined) $('#time7').val(params.t7);
+		// if(params.t8 !== undefined) $('#time8').val(params.t8);
+		// if(params.t9 !== undefined) $('#time9').val(params.t9);
 		if(params.m !== undefined) $('#info').html(params.m);
 		if(loadedcss !== ''){
 			location.reload();
@@ -64,6 +73,12 @@ $(function(){
     var hashstr = '#t1=' + $('#time1').val()
 		+ '&t2=' + $('#time2').val()
 		+ '&t3=' + $('#time3').val()
+		+ '&t4=' + $('#time4').val()
+		+ '&t5=' + $('#time5').val()
+		+ '&t6=' + $('#time6').val()
+		// + '&t7=' + $('#time7').val()
+		// + '&t8=' + $('#time8').val()
+		// + '&t9=' + $('#time9').val()
 		+ '&m=' + encodeURIComponent($('#info').html());
 		if(loadedcss !== 'default'){
 			hashstr = hashstr + '&th=' + encodeURIComponent(loadedcss);
@@ -83,7 +98,7 @@ $(function(){
 	parseHashParams();
 	updateHash();
 
-	$('#time1,#time2,#time3,#info').change(function(){
+	$('#time1,#time2,#time3,#time4,#time5,#time6,#info').change(function(){
 		updateHash();
 	});
 
@@ -215,12 +230,30 @@ $(function(){
 
 					if((last_time < time2 && time2 <= cur_time) || (last_time==time2 && cur_time==time2)){
 						changePhaseClass('2');
-						audio_chime2.currentTime = 0;
-						audio_chime2.play();
+						audio_chime1.currentTime = 0;
+						audio_chime1.play();
 					}
 
 					if((last_time < time3 && time3 <= cur_time) || (last_time==time3 && cur_time==time3)){
 						changePhaseClass('3');
+						audio_chime1.currentTime = 0;
+						audio_chime1.play();
+					}
+
+					if((last_time < time4 && time4 <= cur_time) || (last_time==time4 && cur_time==time4)){
+						changePhaseClass('4');
+						audio_chime1.currentTime = 0;
+						audio_chime1.play();
+					}
+
+					if((last_time < time5 && time5 <= cur_time) || (last_time==time5 && cur_time==time5)){
+						changePhaseClass('5');
+						audio_chime1.currentTime = 0;
+						audio_chime1.play();
+					}
+
+					if((last_time < time6 && time6 <= cur_time) || (last_time==time6 && cur_time==time6)){
+						changePhaseClass('6');
 						audio_chime3.currentTime = 0;
 						audio_chime3.play();
 					}
